@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>supportspacingcalcClass</class>
+ <widget class="QMainWindow" name="supportspacingcalcClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>450</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>支吊架间距计算</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizeIncrement">
+    <size>
+     <width>450</width>
+     <height>450</height>
+    </size>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>450</width>
+      <height>450</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>450</width>
+      <height>450</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Triangular</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+    <property name="documentMode">
+     <bool>true</bool>
+    </property>
+    <property name="movable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="minimumSize">
+      <size>
+       <width>450</width>
+       <height>450</height>
+      </size>
+     </property>
+     <attribute name="title">
+      <string>计算间距</string>
+     </attribute>
+     <widget class="QLineEdit" name="lineEdit_t">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>310</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_p">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>310</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_thickness">
+      <property name="geometry">
+       <rect>
+        <x>203</x>
+        <y>130</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>48</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>壁厚(mm)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_p">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>310</y>
+        <width>54</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>48</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>压力(MPa)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_t">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>310</y>
+        <width>48</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>48</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>温度(℃)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_volumetric_weight">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>250</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>容重(kg/m3)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_showdis">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>340</y>
+        <width>78</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>48</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>最大间距（m）</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_volumetric_weight">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>250</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>150</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_thickness">
+      <property name="geometry">
+       <rect>
+        <x>282</x>
+        <y>130</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_distance">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>280</y>
+        <width>96</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>4.支吊架最大间距</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_cacu">
+      <property name="geometry">
+       <rect>
+        <x>319</x>
+        <y>340</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>69</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>计算</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_ela">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>149</x>
+        <y>370</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:red</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_insulation">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>220</y>
+        <width>36</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>3.保温</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_od">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>130</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>48</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>外径(mm)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_ok">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>190</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>69</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>确定</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_material">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>9</y>
+        <width>84</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>1.选择管道材料</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_pipe">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>100</y>
+        <width>84</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2.输入管径壁厚</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_insulation_thickness">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>250</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>保温厚度(mm)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_weight">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>282</x>
+        <y>160</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:blue</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_weight">
+      <property name="geometry">
+       <rect>
+        <x>203</x>
+        <y>160</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>48</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>管重(kg/m)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_insulation_thickness">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>250</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>370</y>
+        <width>114</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>弹性模量（KN/mm^2）</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_showdis">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>142</x>
+        <y>340</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:blue</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_od">
+      <property name="geometry">
+       <rect>
+        <x>86</x>
+        <y>130</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_quit">
+      <property name="geometry">
+       <rect>
+        <x>319</x>
+        <y>370</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>退出</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>30</y>
+        <width>391</width>
+        <height>58</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QRadioButton" name="ra_P92">
+         <property name="text">
+          <string>A335P91/P92</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QRadioButton" name="ra_12Cr">
+         <property name="text">
+          <string>12Cr1MoVG</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QRadioButton" name="ra_20">
+         <property name="text">
+          <string>20/20G</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QRadioButton" name="ra_Q235">
+         <property name="text">
+          <string>Q235</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QRadioButton" name="ra_15Ni">
+         <property name="text">
+          <string>15Ni1MnMoNbCu</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QRadioButton" name="ra_Q345">
+         <property name="text">
+          <string>Q345</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QRadioButton" name="ra_10">
+         <property name="text">
+          <string>10</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QRadioButton" name="ra_15MoG">
+         <property name="text">
+          <string>15CrMoG</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>159</y>
+        <width>190</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <widget class="QRadioButton" name="ra_water">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>47</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>有水</string>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup_2</string>
+       </attribute>
+      </widget>
+      <widget class="QRadioButton" name="ra_nowater">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>0</y>
+         <width>47</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>无水</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup_2</string>
+       </attribute>
+      </widget>
+     </widget>
+     <zorder>label_showdis</zorder>
+     <zorder>lineEdit_showdis</zorder>
+     <zorder>label_od</zorder>
+     <zorder>lineEdit_od</zorder>
+     <zorder>label_thickness</zorder>
+     <zorder>lineEdit_thickness</zorder>
+     <zorder>pb_ok</zorder>
+     <zorder>label_weight</zorder>
+     <zorder>lineEdit_weight</zorder>
+     <zorder>groupBox_2</zorder>
+     <zorder>groupBox</zorder>
+     <zorder>label_p</zorder>
+     <zorder>label_distance</zorder>
+     <zorder>label_material</zorder>
+     <zorder>label_pipe</zorder>
+     <zorder>lineEdit_t</zorder>
+     <zorder>pb_cacu</zorder>
+     <zorder>lineEdit_p</zorder>
+     <zorder>label_t</zorder>
+     <zorder>label_insulation</zorder>
+     <zorder>label_insulation_thickness</zorder>
+     <zorder>lineEdit_insulation_thickness</zorder>
+     <zorder>label_volumetric_weight</zorder>
+     <zorder>lineEdit_volumetric_weight</zorder>
+     <zorder>pb_quit</zorder>
+     <zorder>label</zorder>
+     <zorder>lineEdit_ela</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>弹性模量</string>
+     </attribute>
+     <widget class="QListWidget" name="listWidget_material">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>151</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>A335P92</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12Cr1MoVG</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20G</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q235</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15Ni1MnMoNbCu</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Q345</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>15CrMoG</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_em">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>221</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>pb_ok</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pb_cacu</sender>
+   <signal>clicked()</signal>
+   <receiver>supportspacingcalcClass</receiver>
+   <slot>on_click_btn_calcDis()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>385</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>348</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_ok</sender>
+   <signal>clicked()</signal>
+   <receiver>supportspacingcalcClass</receiver>
+   <slot>on_click_btn_calcWeight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>369</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonGroup</sender>
+   <signal>buttonClicked(int)</signal>
+   <receiver>supportspacingcalcClass</receiver>
+   <slot>on_toggle_material_radio()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonGroup_2</sender>
+   <signal>buttonClicked(int)</signal>
+   <receiver>supportspacingcalcClass</receiver>
+   <slot>on_toggle_water_radio()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_quit</sender>
+   <signal>clicked()</signal>
+   <receiver>supportspacingcalcClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>415</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>443</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_material</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>supportspacingcalcClass</receiver>
+   <slot>on_list_material_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>134</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_click_btn_calcDis()</slot>
+  <slot>on_click_btn_calcWeight()</slot>
+  <slot>on_toggle_material_radio()</slot>
+  <slot>on_toggle_water_radio()</slot>
+  <slot>on_list_material_clicked()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
+ </buttongroups>
+</ui>

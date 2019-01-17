@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="supportspacingcalc">
+      <file>pipe_32x32.ico</file>
+    </qresource>
+</RCC>
