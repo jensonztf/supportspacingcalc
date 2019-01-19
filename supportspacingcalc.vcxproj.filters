@@ -65,6 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="supportspacingcalc.pro" />
+    <None Include="style.qss">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\pipe_32x32.ico" />

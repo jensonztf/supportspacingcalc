@@ -134,6 +134,7 @@
     <ClInclude Include="steel.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="style.qss" />
     <None Include="supportspacingcalc.pro" />
   </ItemGroup>
   <ItemGroup>

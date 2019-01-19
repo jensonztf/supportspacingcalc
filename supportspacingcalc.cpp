@@ -3,6 +3,7 @@
 #include "steel.h"
 #include <qmessagebox.h>
 #include <qmath.h>
+#include "QFile"
 
 int waterFlag = 0;	//有无水重
 float weight = 0;	//管重
@@ -81,6 +82,12 @@ supportspacingcalc::supportspacingcalc(QWidget *parent)
 			steel_map.insert({ "15CrMoG", GB15CrMoG });
 		}
 	}
+
+	QFile file("style.qss");
+	file.open(QFile::ReadOnly);
+	QString styleSheet = tr(file.readAll());
+	this->setStyleSheet(styleSheet);
+	file.close();
 
 	ui.setupUi(this);
 	setWindowIcon(QIcon(QStringLiteral("pipe_32x32.ico")));
